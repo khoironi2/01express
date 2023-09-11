@@ -4,7 +4,7 @@ const port = 3000 // membuat variable dengan nama port yang isinya 3000 port ini
 
 //membuat route baru dengan method GET yang isinya kalimat halo dek
 app.get('/', (req, res) => {
-    res.send('Halo dek')
+    res.send('Halo lovedek')
 })
 
 // kita listen Express.js kedalam port yang kita buat diatas
