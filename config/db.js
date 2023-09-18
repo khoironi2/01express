@@ -3,7 +3,7 @@ let msyql = require('mysql'); // import library mysql
 let connection = msyql.createConnection({
     host:   'localhost',
     user:   'root',
-    password:   '',
+    password:   'root',
     database:   'db_01_express'
 });
 

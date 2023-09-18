@@ -3,9 +3,13 @@ const app = express() // membuat variable baru dengan nama app yang isinya varia
 const port = 3000 // membuat variable dengan nama port yang isinya 3000 port ini yang akan kita gunakan untuk menjalankan express
 
 //membuat route baru dengan method GET yang isinya kalimat halo dek
-app.get('/', (req, res) => {
-    res.send('Halo lovedek')
-})
+// app.get('/', (req, res) => {
+//     res.send('Halo lovedek')
+// })
+
+//import route posts
+const mhsRouter = require('./routes/mahasiswa');
+app.use('/api/mhs', mhsRouter);
 
 // kita listen Express.js kedalam port yang kita buat diatas
 app.listen(port, () => {
