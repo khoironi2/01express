@@ -8,6 +8,11 @@ const port = 3000 // membuat variable dengan nama port yang isinya 3000 port ini
 // })
 
 //import route posts
+
+const bodyPs = require('body-parser'); //import body-parser
+app.use(bodyPs.urlencoded({ extended: false}));
+app.use(bodyPs.json());
+
 const mhsRouter = require('./routes/mahasiswa');
 app.use('/api/mhs', mhsRouter);
 
