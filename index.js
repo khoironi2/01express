@@ -16,8 +16,11 @@ app.use(bodyPs.json());
 const mhsRouter = require('./routes/mahasiswa');
 app.use('/api/mhs', mhsRouter);
 
+const jurusanRouter = require('./routes/jurusan');
+app.use('/api/jurusan', jurusanRouter);
+
 // kita listen Express.js kedalam port yang kita buat diatas
 app.listen(port, () => {
     //dan kita tampilkan log sebagai penanda bahawa Express,js  berhasil dijalan kan di port 3000
-    console.log(`aplikasi berjalan di http:://localhost:${port}`)
+    console.log(`aplikasi berjalan di http://localhost:${port}`)
 })
